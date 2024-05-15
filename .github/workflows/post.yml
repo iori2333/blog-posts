@@ -3,7 +3,7 @@ name: Post articles
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   post:
@@ -16,4 +16,4 @@ jobs:
         uses: iori2333/post-to-issue@master
         with:
           token: "${{ secrets.TOKEN }}"
-          branch: main
+          branch: master
