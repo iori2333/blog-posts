@@ -1,0 +1,19 @@
+name: Post articles
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Post
+        uses: iori2333/post-to-issue@master
+        with:
+          token: "${{ secrets.TOKEN }}"
+          branch: main
